@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { capitaliseFirstLetter, formatDate } from "../utils";
 
 type Expense = {
   id: number;
@@ -30,7 +31,34 @@ const ExpensesTable = () => {
       });
   }, []);
 
-  return <div>Expenses</div>;
+  return (
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Merchant</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {expenses.map((expense: Expense) => (
+            <tr key={expense.id}>
+              <td>{formatDate(expense.date)}</td>
+              <td>{expense.merchant}</td>
+              <td>£{expense.amount}</td>
+              <td>{capitaliseFirstLetter(expense.category)}</td>
+              <td>{expense.description}</td>
+              <td>{capitaliseFirstLetter(expense.status)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default ExpensesTable;
