@@ -61,10 +61,40 @@ h6 {
   isolation: isolate;
 }
 
-#template-text {
+/* #template-text {
   font-size: 1.2rem;
   font-weight: 400;
   color: #333;
   margin: 20px;
   padding: 0;
+} */
+
+
+/* Table Styling */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 8px;
+  text-align: start;
+}
+
+/* Page Styling */
+
+.page-heading {
+  border-bottom: 2px solid #333;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
 }

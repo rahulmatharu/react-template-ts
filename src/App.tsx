@@ -2,8 +2,10 @@ import ExpensesTable from "./components/ExpensesTable";
 
 function App() {
   return (
-    <div id="template-text">
-      <h1>React Starter Template - TypeScript</h1>
+    <div className="container" id="template-text">
+      <div className="page-heading">
+        <h1 className="">Expenses</h1>
+      </div>
       <ExpensesTable />
     </div>
   );
